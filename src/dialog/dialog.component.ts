@@ -1,7 +1,10 @@
-import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
+  standalone: true,
+  imports: [BrowserAnimationsModule],
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
@@ -19,7 +22,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class DialogComponent implements OnInit {
   @Input() closable = true;
-  @Input() visible: boolean;
+  @Input() visible = false;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }

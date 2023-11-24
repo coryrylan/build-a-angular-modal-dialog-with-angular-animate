@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
-  selector: 'my-app',
+  standalone: true,
+  imports: [DialogComponent],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
+export class AppComponent {
   showDialog = false;
 }
