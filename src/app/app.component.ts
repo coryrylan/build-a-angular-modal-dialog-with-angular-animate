@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   standalone: true,
-  imports: [DialogComponent],
+  imports: [CommonModule, DialogComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
